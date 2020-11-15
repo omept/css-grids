@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  list-style: none;
+
+  display: grid;
+  grid-gap: 3px;
+  /* grid-template-columns: repeat(auto-fit, 100px); */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /* grid-template-rows: repeat(2, 100px); */ /* explictly define the number of rows for the grid as 2 and the height as 100px  */
+  grid-auto-rows: 100px; /*  implictly define the number of rows for the grid and the height */
+  text-align: center;
+}
+
+ul.container > li:nth-child(odd) {
+  background-color: aquamarine;
+}
+ul.container > li:nth-child(even) {
+  background-color: rgb(199, 93, 93);
+}
